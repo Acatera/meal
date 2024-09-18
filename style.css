@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.accordion-header {
+    margin: 0;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+.accordion-button::after {
+    content: '\002B'; /* Plus sign */
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+}
+
+.accordion-button.active::after {
+    content: '\2212'; /* Minus sign */
+}
+
+.accordion-content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content .meal {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-content .meal:last-child {
+    border-bottom: none;
+}
+
+.meal h3 {
+    margin-top: 0;
+}
+
+.meal ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .accordion-button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .accordion-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

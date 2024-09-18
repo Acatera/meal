@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Plans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Meal Plans</h1>
+    <div class="accordion">
+        <!-- Meal Plan 1 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button">
+                    Meal Plan 1
+                </button>
+            </h2>
+            <div class="accordion-content">
+                <!-- Meal 1 -->
+                <div class="meal">
+                    <h3>Meal 1 (12:00 PM - Break Fast)</h3>
+                    <p><strong>Oats with Peanut Butter and Berries</strong></p>
+                    <ul>
+                        <li>50g oats</li>
+                        <li>1 tbsp peanut butter</li>
+                        <li>100g mixed berries</li>
+                        <li>200ml unsweetened almond milk</li>
+                    </ul>
+                    <p>Approx.: 460 kcal, 30g protein, 18g fat, 42g carbs</p>
+                </div>
+                <!-- Meal 2 -->
+                <div class="meal">
+                    <h3>Meal 2 (3:00 PM - Lunch)</h3>
+                    <p><strong>Grilled Chicken Breast with Brown Rice and Broccoli</strong></p>
+                    <ul>
+                        <li>150g grilled chicken breast</li>
+                        <li>100g brown rice</li>
+                        <li>150g steamed broccoli</li>
+                        <li>1 tbsp olive oil</li>
+                    </ul>
+                    <p>Approx.: 500 kcal, 48g protein, 15g fat, 45g carbs</p>
+                </div>
+                <!-- Meal 3 -->
+                <div class="meal">
+                    <h3>Meal 3 (6:00 PM - Dinner)</h3>
+                    <p><strong>Grilled Salmon with Chickpeas and Spinach</strong></p>
+                    <ul>
+                        <li>150g grilled salmon</li>
+                        <li>100g chickpeas</li>
+                        <li>150g sautéed spinach (in olive oil)</li>
+                    </ul>
+                    <p>Approx.: 540 kcal, 45g protein, 23g fat, 35g carbs</p>
+                </div>
+                <!-- Snack -->
+                <div class="meal">
+                    <h3>Snack (8:00 PM)</h3>
+                    <p><strong>Greek Yogurt with Nuts and Berries</strong></p>
+                    <ul>
+                        <li>150g low-fat Greek yogurt</li>
+                        <li>20g mixed nuts</li>
+                        <li>50g mixed berries</li>
+                    </ul>
+                    <p>Approx.: 300 kcal, 17g protein, 13g fat, 20g carbs</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat similar blocks for Meal Plans 2 to 7 -->
+
+        <!-- Meal Plan 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button">
+                    Meal Plan 2
+                </button>
+            </h2>
+            <div class="accordion-content">
+                <!-- Meal 1 -->
+                <div class="meal">
+                    <h3>Meal 1 (12:00 PM - Break Fast)</h3>
+                    <p><strong>Scrambled Eggs and Avocado Toast</strong></p>
+                    <ul>
+                        <li>3 scrambled eggs</li>
+                        <li>1 slice whole grain bread</li>
+                        <li>50g avocado</li>
+                    </ul>
+                    <p>Approx.: 450 kcal, 28g protein, 25g fat, 25g carbs</p>
+                </div>
+                <!-- Meal 2 -->
+                <div class="meal">
+                    <h3>Meal 2 (3:00 PM - Lunch)</h3>
+                    <p><strong>Chicken Thighs with Sweet Potato and Broccoli</strong></p>
+                    <ul>
+                        <li>150g grilled chicken thighs (skinless)</li>
+                        <li>100g sweet potato</li>
+                        <li>150g steamed broccoli</li>
+                    </ul>
+                    <p>Approx.: 520 kcal, 40g protein, 20g fat, 40g carbs</p>
+                </div>
+                <!-- Meal 3 -->
+                <div class="meal">
+                    <h3>Meal 3 (6:00 PM - Dinner)</h3>
+                    <p><strong>Salmon with Quinoa and Asparagus</strong></p>
+                    <ul>
+                        <li>150g grilled salmon</li>
+                        <li>100g cooked quinoa</li>
+                        <li>150g asparagus (grilled)</li>
+                    </ul>
+                    <p>Approx.: 530 kcal, 45g protein, 23g fat, 35g carbs</p>
+                </div>
+                <!-- Snack -->
+                <div class="meal">
+                    <h3>Snack (8:00 PM)</h3>
+                    <p><strong>Greek Yogurt with Peanut Butter</strong></p>
+                    <ul>
+                        <li>150g low-fat Greek yogurt</li>
+                        <li>1 tbsp peanut butter</li>
+                    </ul>
+                    <p>Approx.: 280 kcal, 15g protein, 15g fat, 20g carbs</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continue adding Meal Plans 3 to 7 in the same format -->
+        
+        <!-- Meal Plan 3 -->
+        <!-- ... -->
+        
+        <!-- Meal Plan 4 -->
+        <!-- ... -->
+        
+        <!-- Meal Plan 5 -->
+        <!-- ... -->
+        
+        <!-- Meal Plan 6 -->
+        <!-- ... -->
+        
+        <!-- Meal Plan 7 -->
+        <!-- ... -->
+    </div>
+
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        const accButtons = document.querySelectorAll('.accordion-button');
+
+        accButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.parentElement.nextElementSibling;
+                button.classList.toggle('active');
+
+                // Close other accordions
+                accButtons.forEach(btn => {
+                    if (btn !== button) {
+                        btn.classList.remove('active');
+                        btn.parentElement.nextElementSibling.style.maxHeight = null;
+                    }
+                });
+
+                if (button.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
